@@ -28,6 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let contentView = ContentView()
             .environment(\.managedObjectContext, context)
             .environmentObject(ContactStore())
+            .environmentObject(CalendarEvents())
             .environmentObject(Friends())
             .environmentObject(Places())
 

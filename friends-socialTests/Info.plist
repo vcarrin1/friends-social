@@ -20,5 +20,7 @@
 	<string>1</string>
 	<key>NSContactsUsageDescription</key>
 	<string>Allow Contact Access</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Allow Calendar Access </string>
 </dict>
 </plist>

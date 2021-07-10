@@ -44,6 +44,7 @@
 		FBE6D353258862DD00EDED3D /* AppSidebarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6D352258862DD00EDED3D /* AppSidebarNavigation.swift */; };
 		FBE6D35C258867AA00EDED3D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6D35B258867AA00EDED3D /* HomeView.swift */; };
 		FBE6D3652589BE6D00EDED3D /* CircleToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6D3642589BE6D00EDED3D /* CircleToggleStyle.swift */; };
+		FBF36E84269A392C00122453 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF36E83269A392C00122453 /* CalendarManager.swift */; };
 		FBF6EE5C2585DA0E00B16CD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF6EE5B2585DA0E00B16CD8 /* AppDelegate.swift */; };
 		FBF6EE5E2585DA0E00B16CD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF6EE5D2585DA0E00B16CD8 /* SceneDelegate.swift */; };
 		FBF6EE612585DA0E00B16CD8 /* friends_social.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBF6EE5F2585DA0E00B16CD8 /* friends_social.xcdatamodeld */; };
@@ -110,6 +111,7 @@
 		FBE6D352258862DD00EDED3D /* AppSidebarNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSidebarNavigation.swift; sourceTree = "<group>"; };
 		FBE6D35B258867AA00EDED3D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FBE6D3642589BE6D00EDED3D /* CircleToggleStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleToggleStyle.swift; path = "../../../../../Downloads/FrutaBuildingAFeatureRichAppWithSwiftUI-2/Shared/Styles/CircleToggleStyle.swift"; sourceTree = "<group>"; };
+		FBF36E83269A392C00122453 /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 		FBF6EE582585DA0E00B16CD8 /* friends-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "friends-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF6EE5B2585DA0E00B16CD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBF6EE5D2585DA0E00B16CD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -272,6 +274,14 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		FBF36E82269A390D00122453 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				FBF36E83269A392C00122453 /* CalendarManager.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		FBF6EE4F2585DA0E00B16CD8 = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +305,7 @@
 		FBF6EE5A2585DA0E00B16CD8 /* friends-social */ = {
 			isa = PBXGroup;
 			children = (
+				FBF36E82269A390D00122453 /* Calendar */,
 				FBBB217225A6906D00508C1A /* Ratings */,
 				FBBB2153259A6AC600508C1A /* PlaceRecommender.mlmodel */,
 				FBBB20C8258D13BE00508C1A /* Map */,
@@ -487,6 +498,7 @@
 				FBF6EE5C2585DA0E00B16CD8 /* AppDelegate.swift in Sources */,
 				FBBB20CA258D183000508C1A /* SearchCities.swift in Sources */,
 				FBBB218425A6B41500508C1A /* UpdateEventView.swift in Sources */,
+				FBF36E84269A392C00122453 /* CalendarManager.swift in Sources */,
 				FBF6EE612585DA0E00B16CD8 /* friends_social.xcdatamodeld in Sources */,
 				FBBB21062598FCA800508C1A /* AddButtonStyle.swift in Sources */,
 				FBBB211A259907D500508C1A /* MapView.swift in Sources */,
@@ -614,7 +626,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -668,7 +680,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

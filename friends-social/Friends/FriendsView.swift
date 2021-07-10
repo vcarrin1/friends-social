@@ -52,7 +52,6 @@ class ContactStore: ObservableObject {
     
     func fetchContacts() {
         
-        
         let store = CNContactStore()
         store.requestAccess(for: .contacts) { (granted, error) in
             if let error = error {

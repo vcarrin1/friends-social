@@ -16,6 +16,7 @@ struct AppSidebarNavigation: View {
         case ratings
         case friends
         case map
+        case calendar
     }
 
     @EnvironmentObject private var model: AddressData
@@ -34,10 +35,10 @@ struct AppSidebarNavigation: View {
             }
             .tag(NavigationItem.ratings)
         
-//            NavigationLink(destination: FriendsView(), tag: NavigationItem.friends, selection: $selection) {
-//                Label("Friends", systemImage: "person.3.fill").accessibility(label: Text("Friends"))
-//            }
-//            .tag(NavigationItem.friends)
+            NavigationLink(destination: CalendarView(), tag: NavigationItem.calendar, selection: $selection) {
+                Label("Calendar", systemImage: "calendar.badge.clock").accessibility(label: Text("Calendar"))
+            }
+            .tag(NavigationItem.friends)
             
         }
         .listStyle(SidebarListStyle())
