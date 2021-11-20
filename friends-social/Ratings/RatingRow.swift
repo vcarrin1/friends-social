@@ -14,6 +14,8 @@ struct RatingRow: View {
     @State private var place: String
     @State private var rating: Int16 = 0
     @Environment(\.managedObjectContext) var context
+    
+    @ObservedObject var ratingViewModel = RatingViewModel()
 
     var label = ""
     var maximumRating = 5
@@ -46,10 +48,12 @@ struct RatingRow: View {
                     .onTapGesture {
                         self.rating = int16Num
                         if ratingSet.last?.rating == nil {
-                            let rate = Rating(context: context)
-                            rate.place = self.place
-                            rate.rating = int16Num
-                            try! self.context.save()
+//                            let rate = Rating(context: context)
+//                            rate.place = self.place
+//                            rate.rating = int16Num
+//                            try! self.context.save()
+                            let rate = RatingPlace(user: "vcarri202", place: self.place, score: int16Num)
+                            ratingViewModel.add(rate)
                         } else {
                             context.performAndWait {
                                 ratingSet.last?.rating = int16Num

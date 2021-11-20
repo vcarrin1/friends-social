@@ -8,14 +8,14 @@
 import Combine
 import CoreML
 import SwiftUI
+import CoreData
 
 public class Recommender: ObservableObject {
     
     @Published var places = [Place]()
     
     // Fetch events from core data
-    @FetchRequest(entity: Rating.entity(),
-    sortDescriptors: [])
+    @FetchRequest(entity: Rating.entity(), sortDescriptors: [])
     var ratings: FetchedResults<Rating>
     
     init(){
