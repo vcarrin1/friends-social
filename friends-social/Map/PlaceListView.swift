@@ -27,8 +27,8 @@ struct PlaceListView: View {
     }
 }
 
-struct PlaceListView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlaceListView(landmarks: [Landmark(placemark: MKPlacemark())])
-    }
-}
+//struct PlaceListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlaceListView(landmarks: [Landmark(placemark: MKPlacemark())])
+//    }
+//}

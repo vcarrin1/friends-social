@@ -32,12 +32,12 @@ struct AppTabNavigation: View {
             .tag(Tab.favorites)
             
             NavigationView {
-                EventsView()
+                CalendarView()
             }
             .tabItem {
-                Label("Map", systemImage: "map").accessibility(label: Text("Map"))
+                Label("Calendar", systemImage: "calendar.badge.clock").accessibility(label: Text("Calendar"))
             }
-            .tag(Tab.recipes)
+            .tag(Tab.favorites)
         }
     }
 }
