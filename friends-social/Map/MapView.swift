@@ -15,15 +15,10 @@ struct MapView: View {
     @StateObject var locationManager = LocationManager()
     @ObservedObject var searchPlaces = SearchPlaces()
     @EnvironmentObject var selectedLandmarks: Places
-    @StateObject private var recommenderModel: RecommenderModel
     
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 32.715736, longitude: -117.161087),
                                                    span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
     @State private var cancellable: AnyCancellable?
-
-    init() {
-      _recommenderModel = StateObject(wrappedValue: RecommenderModel())
-    }
     
     @State var placeListModal = false
     
@@ -46,11 +41,6 @@ struct MapView: View {
                 .sheet(isPresented: $placeListModal) {
                     PlaceListView(landmarks: self.searchPlaces.landmarks)
                 }
-            }
-            
-            VStack(alignment: .leading, spacing: 0) {
-                Spacer()
-                RecommenderView(recommendations: recommenderModel.recommendations)
             }
             
         }.onAppear {
