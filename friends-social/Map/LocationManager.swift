@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import CoreLocation
+import MapKit
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     var locationManager: CLLocationManager = CLLocationManager()
@@ -22,23 +23,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
     }
-    
-    private func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        switch status {
-        case .restricted,.denied,.notDetermined:
-            // report error, do something
-            print("error")
-        default:
-            // location si allowed, start monitoring
-            manager.startUpdatingLocation()
-        }
-    }
-    
-//    func locationManager(manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-//        print(status)
-//        // do something with the error
-//    }
-    
+
     private func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else {
            return

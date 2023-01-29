@@ -7,16 +7,24 @@
 //
 import SwiftUI
 import MapKit
+import Combine
 
 struct MapView: View {
     
     @State private var centerCoordinate = CLLocationCoordinate2D()
-    @ObservedObject var locationManager = LocationManager()
+    @StateObject var locationManager = LocationManager()
     @ObservedObject var searchPlaces = SearchPlaces()
     @EnvironmentObject var selectedLandmarks: Places
-    @ObservedObject var topRecommendations = Recommender()
+    @StateObject private var recommenderModel: RecommenderModel
     
-    @State var recomendationsModal = false
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 32.715736, longitude: -117.161087),
+                                                   span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+    @State private var cancellable: AnyCancellable?
+
+    init() {
+      _recommenderModel = StateObject(wrappedValue: RecommenderModel())
+    }
+    
     @State var placeListModal = false
     
     var body: some View {
@@ -25,57 +33,36 @@ struct MapView: View {
                 print("Title clicked", title)
             }).edgesIgnoringSafeArea(.all)
             
-            TextField("Search Places", text: $searchPlaces.searchQuery, onEditingChanged: { _ in}) {
-                self.searchPlaces.getNearByLandmarks()
-            }.textFieldStyle(RoundedBorderTextFieldStyle()).padding().offset(y: 40)
-            
-            VStack(alignment: .leading, spacing: 0) {
-                Spacer()
-                Text("Recommendations").font(.headline).padding(.leading, 15)
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .top, spacing: 0) {
-                        ForEach(topRecommendations.places) { place in
-                            ZStack {
-                                Rectangle().fill(Color.white).padding().cornerRadius(20)
-                                VStack {
-                                    Text(place.name)
-                                    Text("\(place.score)")
-                                    .font(.system(size: 14))
-                                    .foregroundColor(Color.gray)
-                                }.onTapGesture {
-                                    self.searchPlaces.searchQuery = place.name
-                                    self.searchPlaces.getNearByLandmarks()
-                                }
-                            }.frame(width: 220, height: 120)
-                        }
-                    }
+            HStack {
+                TextField("Search Places", text: $searchPlaces.searchQuery, onEditingChanged: { _ in}) {
+                    self.searchPlaces.getNearByLandmarks()
+                }.textFieldStyle(RoundedBorderTextFieldStyle()).padding(5)
+                
+                Button(action: {
+                    self.placeListModal.toggle()
+                }) { Text("Found (\(self.searchPlaces.landmarks.count))") }
+                .buttonStyle(BorderedButtonStyle(bgColor: .black))
+                .padding(5)
+                .sheet(isPresented: $placeListModal) {
+                    PlaceListView(landmarks: self.searchPlaces.landmarks)
                 }
             }
             
-//            VStack {
-//                Spacer()
-//                HStack {
-//                    Spacer()
-//                    Button(action: {
-//                        self.recomendationsModal.toggle()
-//                    }) { Text("Recommendations") }
-//                    .buttonStyle(BorderedButtonStyle(bgColor: .black))
-//                    .padding(.trailing)
-//                    .sheet(isPresented: $recomendationsModal) {
-//                        RecommendationView(searchPlaces: self.searchPlaces)
-//                    }
-//
-//                    Button(action: {
-//                        self.placeListModal.toggle()
-//                    }) { Text("Searched Places (\(self.searchPlaces.landmarks.count))") }
-//                    .buttonStyle(BorderedButtonStyle(bgColor: .black))
-//                    .padding(.trailing)
-//                    .sheet(isPresented: $placeListModal) {
-//                        PlaceListView(landmarks: self.searchPlaces.landmarks)
-//                    }
-//                }.padding(.bottom, 20)
-//            }
+            VStack(alignment: .leading, spacing: 0) {
+                Spacer()
+                RecommenderView(recommendations: recommenderModel.recommendations)
+            }
             
+        }.onAppear {
+            setCurrentLocation()
         }
+    }
+
+    private func setCurrentLocation() {
+
+        cancellable = locationManager.$location.sink { location in
+            region = MKCoordinateRegion(center: location?.coordinate ?? CLLocationCoordinate2D(), latitudinalMeters: 500, longitudinalMeters: 500)
+        }
+
     }
 }

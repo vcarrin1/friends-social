@@ -13,14 +13,15 @@ import MapKit
 struct MapRepresentable: UIViewRepresentable {
     
     let landmarks: [Landmark]
+    @StateObject var locationManager = LocationManager()
     @Binding var centerCoordinate: CLLocationCoordinate2D
     @EnvironmentObject var selectedLandmarks: Places
     var annotationOnTap: (_ title: String) -> Void
 
     func makeUIView(context: Context) -> MKMapView {
         let map = MKMapView()
-        map.showsUserLocation = true
         map.delegate = context.coordinator
+        map.showsUserLocation = true
         return map
     }
 
