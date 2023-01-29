@@ -35,10 +35,7 @@
 		FBBB217F25A693C800508C1A /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBB217E25A693C800508C1A /* RatingView.swift */; };
 		FBBB218425A6B41500508C1A /* UpdateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBB218325A6B41500508C1A /* UpdateEventView.swift */; };
 		FBE6D3072586B17500EDED3D /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6D3062586B17500EDED3D /* EventsView.swift */; };
-		FBE6D3112586B35700EDED3D /* addressesData.json in Resources */ = {isa = PBXBuildFile; fileRef = FBE6D3102586B35700EDED3D /* addressesData.json */; };
-		FBE6D3182586B3D000EDED3D /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6D3172586B3D000EDED3D /* Address.swift */; };
 		FBE6D3202586B7BA00EDED3D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6D31F2586B7BA00EDED3D /* Utils.swift */; };
-		FBE6D3252586BA7500EDED3D /* AddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6D3242586BA7500EDED3D /* AddressData.swift */; };
 		FBE6D32A2586BFB300EDED3D /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6D3292586BFB300EDED3D /* City.swift */; };
 		FBE6D33A25883B6F00EDED3D /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6D33925883B6F00EDED3D /* FriendsView.swift */; };
 		FBE6D34B2588628B00EDED3D /* AppTabNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE6D34A2588628B00EDED3D /* AppTabNavigation.swift */; };
@@ -52,7 +49,6 @@
 		FBF6EE632585DA0E00B16CD8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF6EE622585DA0E00B16CD8 /* ContentView.swift */; };
 		FBF6EE652585DA1000B16CD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBF6EE642585DA1000B16CD8 /* Assets.xcassets */; };
 		FBF6EE682585DA1000B16CD8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBF6EE672585DA1000B16CD8 /* Preview Assets.xcassets */; };
-		FBF6EE6B2585DA1000B16CD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBF6EE692585DA1000B16CD8 /* LaunchScreen.storyboard */; };
 		FBF6EE762585DA1100B16CD8 /* friends_socialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF6EE752585DA1100B16CD8 /* friends_socialTests.swift */; };
 		FBF6EE812585DA1100B16CD8 /* friends_socialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF6EE802585DA1100B16CD8 /* friends_socialUITests.swift */; };
 /* End PBXBuildFile section */
@@ -103,10 +99,7 @@
 		FBBB217E25A693C800508C1A /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		FBBB218325A6B41500508C1A /* UpdateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEventView.swift; sourceTree = "<group>"; };
 		FBE6D3062586B17500EDED3D /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
-		FBE6D3102586B35700EDED3D /* addressesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = addressesData.json; path = ../../../../../Downloads/BuildingListsAndNavigation/Complete/Landmarks/Resources/addressesData.json; sourceTree = "<group>"; };
-		FBE6D3172586B3D000EDED3D /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Address.swift; path = ../../../../../Downloads/BuildingListsAndNavigation/Complete/Landmarks/Model/Address.swift; sourceTree = "<group>"; };
 		FBE6D31F2586B7BA00EDED3D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		FBE6D3242586BA7500EDED3D /* AddressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressData.swift; sourceTree = "<group>"; };
 		FBE6D3292586BFB300EDED3D /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		FBE6D33925883B6F00EDED3D /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
 		FBE6D34A2588628B00EDED3D /* AppTabNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabNavigation.swift; sourceTree = "<group>"; };
@@ -121,7 +114,6 @@
 		FBF6EE622585DA0E00B16CD8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FBF6EE642585DA1000B16CD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBF6EE672585DA1000B16CD8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FBF6EE6A2585DA1000B16CD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBF6EE6C2585DA1000B16CD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBF6EE712585DA1100B16CD8 /* friends-socialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "friends-socialTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF6EE752585DA1100B16CD8 /* friends_socialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friends_socialTests.swift; sourceTree = "<group>"; };
@@ -216,19 +208,9 @@
 			path = Events;
 			sourceTree = "<group>";
 		};
-		FBE6D30F2586B33E00EDED3D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				FBE6D3102586B35700EDED3D /* addressesData.json */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		FBE6D3152586B3A000EDED3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FBE6D3172586B3D000EDED3D /* Address.swift */,
-				FBE6D3242586BA7500EDED3D /* AddressData.swift */,
 				FBE6D3292586BFB300EDED3D /* City.swift */,
 				FBBB20E2258FF23E00508C1A /* Friends.swift */,
 				FBBB20F02594517F00508C1A /* Landmark.swift */,
@@ -326,7 +308,6 @@
 				FBE6D33825883B5400EDED3D /* Friends */,
 				FBE6D3162586B3BB00EDED3D /* Helpers */,
 				FBE6D3152586B3A000EDED3D /* Model */,
-				FBE6D30F2586B33E00EDED3D /* Resources */,
 				FBE6D3052586B15000EDED3D /* Events */,
 				FBC1D76325867768006F0463 /* Views */,
 				FBF6EE5B2585DA0E00B16CD8 /* AppDelegate.swift */,
@@ -334,7 +315,6 @@
 				FBF6EE622585DA0E00B16CD8 /* ContentView.swift */,
 				FB56E4BE269AB1AD007E9BEA /* PlaceRecommender.mlmodel */,
 				FBF6EE642585DA1000B16CD8 /* Assets.xcassets */,
-				FBF6EE692585DA1000B16CD8 /* LaunchScreen.storyboard */,
 				FBF6EE6C2585DA1000B16CD8 /* Info.plist */,
 				FBF6EE5F2585DA0E00B16CD8 /* friends_social.xcdatamodeld */,
 				FBF6EE662585DA1000B16CD8 /* Preview Content */,
@@ -476,8 +456,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBF6EE6B2585DA1000B16CD8 /* LaunchScreen.storyboard in Resources */,
-				FBE6D3112586B35700EDED3D /* addressesData.json in Resources */,
 				FBF6EE682585DA1000B16CD8 /* Preview Assets.xcassets in Resources */,
 				FBF6EE652585DA1000B16CD8 /* Assets.xcassets in Resources */,
 			);
@@ -504,7 +482,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBE6D3182586B3D000EDED3D /* Address.swift in Sources */,
 				FBBB20B2258B135A00508C1A /* CreateEventView.swift in Sources */,
 				FBBB21152599070B00508C1A /* Coordinator.swift in Sources */,
 				FBE6D35C258867AA00EDED3D /* HomeView.swift in Sources */,
@@ -538,7 +515,6 @@
 				FBBB214225999F5900508C1A /* RecommendationView.swift in Sources */,
 				FBBB211F2599081700508C1A /* MapRepresentable.swift in Sources */,
 				FBE6D3652589BE6D00EDED3D /* CircleToggleStyle.swift in Sources */,
-				FBE6D3252586BA7500EDED3D /* AddressData.swift in Sources */,
 				FBBB216E25A68EA300508C1A /* RatingCoreData.swift in Sources */,
 				FBBB217F25A693C800508C1A /* RatingView.swift in Sources */,
 				FBBB213D25999BE700508C1A /* Recommender.swift in Sources */,
@@ -579,17 +555,6 @@
 			targetProxy = FBF6EE7D2585DA1100B16CD8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		FBF6EE692585DA1000B16CD8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FBF6EE6A2585DA1000B16CD8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FBF6EE832585DA1100B16CD8 /* Debug */ = {

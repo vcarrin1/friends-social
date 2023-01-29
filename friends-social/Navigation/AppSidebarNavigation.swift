@@ -19,7 +19,6 @@ struct AppSidebarNavigation: View {
         case calendar
     }
 
-    @EnvironmentObject private var model: AddressData
     @State private var selection: NavigationItem? = .home
     @State private var presentingRewards = false
     
@@ -52,11 +51,4 @@ struct AppSidebarNavigation: View {
         }
     }
 
-}
-
-struct AppSidebarNavigation_Previews: PreviewProvider {
-    static var previews: some View {
-        AppSidebarNavigation()
-            .environmentObject(AddressData())
-    }
 }
