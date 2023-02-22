@@ -18,8 +18,8 @@ struct PlaceListView: View {
             List {
                 ForEach(self.landmarks, id: \.id) { landmark in
                     VStack(alignment: .leading) {
-                        Text(landmark.name).fontWeight(.bold)
-                        Text(landmark.title)
+                        Text(landmark.placemark.name ?? "no name").fontWeight(.bold)
+                        Text(landmark.placemark.title ?? "no title")
                     }
                 }
             }.navigationBarTitle("Searched Places", displayMode: .inline)

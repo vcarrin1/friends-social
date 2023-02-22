@@ -25,9 +25,28 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 
     private func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else {
+        guard let location = locations.first else {
            return
         }
         self.location = location
+    }
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        checkAuthorization()
+    }
+    
+    private func checkAuthorization() {
+        switch locationManager.authorizationStatus {
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        case .restricted:
+            print("Restricted")
+        case .denied:
+            print("Denied")
+        case .authorizedAlways, .authorizedWhenInUse:
+            print("Authorized")
+        @unknown default:
+            break
+        }
     }
 }

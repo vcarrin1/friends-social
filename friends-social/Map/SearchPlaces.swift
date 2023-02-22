@@ -22,11 +22,26 @@ class SearchPlaces: NSObject, ObservableObject {
             if let response = response {
                 let mapItems = response.mapItems
                 self.landmarks = mapItems.map {
-                   Landmark(placemark: $0.placemark)
+                    Landmark(placemark: $0.placemark)
                 }
-                
+                Task {
+                    await self.getData()
+                }
                 print("Lamdmarks \(self.landmarks)")
             }
+        }
+    }
+    
+    private func getData() async {
+        guard let landmark = try? JSONEncoder().encode(self.landmarks) else { return }
+        
+        do {
+            let decodedLandmark = try JSONDecoder().decode([Landmark].self, from: landmark)
+            print("decodedLandmark \(decodedLandmark)")
+        } catch DecodingError.typeMismatch(let type, let context) {
+            print("Type '\(type)' mismatch:", context.debugDescription)
+        } catch {
+            print("Error \(error)")
         }
     }
 

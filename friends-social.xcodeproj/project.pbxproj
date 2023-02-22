@@ -193,6 +193,9 @@
 		FBC1D76325867768006F0463 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FBE6D35B258867AA00EDED3D /* HomeView.swift */,
+				FBE6D33925883B6F00EDED3D /* FriendsView.swift */,
+				FBF36E83269A392C00122453 /* CalendarView.swift */,
 				FBBB20DC258DB97400508C1A /* SearchBar.swift */,
 			);
 			path = Views;
@@ -231,14 +234,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		FBE6D33825883B5400EDED3D /* Friends */ = {
-			isa = PBXGroup;
-			children = (
-				FBE6D33925883B6F00EDED3D /* FriendsView.swift */,
-			);
-			path = Friends;
-			sourceTree = "<group>";
-		};
 		FBE6D3492588627300EDED3D /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,14 +241,6 @@
 				FBE6D352258862DD00EDED3D /* AppSidebarNavigation.swift */,
 			);
 			path = Navigation;
-			sourceTree = "<group>";
-		};
-		FBE6D35A2588679800EDED3D /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				FBE6D35B258867AA00EDED3D /* HomeView.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		FBE6D3632589BE5900EDED3D /* Styles */ = {
@@ -264,14 +251,6 @@
 				FBBB21052598FCA800508C1A /* AddButtonStyle.swift */,
 			);
 			path = Styles;
-			sourceTree = "<group>";
-		};
-		FBF36E82269A390D00122453 /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				FBF36E83269A392C00122453 /* CalendarView.swift */,
-			);
-			path = Calendar;
 			sourceTree = "<group>";
 		};
 		FBF6EE4F2585DA0E00B16CD8 = {
@@ -298,14 +277,11 @@
 			isa = PBXGroup;
 			children = (
 				FB56E4BA269AB17C007E9BEA /* MLRecommender */,
-				FBF36E82269A390D00122453 /* Calendar */,
 				FBBB217225A6906D00508C1A /* Ratings */,
 				FBBB20C8258D13BE00508C1A /* Map */,
 				FBBB20B6258C076200508C1A /* CoreData */,
 				FBE6D3632589BE5900EDED3D /* Styles */,
-				FBE6D35A2588679800EDED3D /* Home */,
 				FBE6D3492588627300EDED3D /* Navigation */,
-				FBE6D33825883B5400EDED3D /* Friends */,
 				FBE6D3162586B3BB00EDED3D /* Helpers */,
 				FBE6D3152586B3A000EDED3D /* Model */,
 				FBE6D3052586B15000EDED3D /* Events */,
